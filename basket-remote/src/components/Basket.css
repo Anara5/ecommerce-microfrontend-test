@@ -1,0 +1,64 @@
+.basketToggle, .closeBasket {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    color: #0056b3;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.basketToggle {
+    transition: background 0.3s;
+}
+
+.basketToggle:hover, .closeBasket:hover {
+    background-color: #727374;
+}
+
+.basketContainer {
+    position: fixed;
+    right: -320px; /* Hidden off-screen */
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+}
+
+/* Basket when open (slides in) */
+.basketContainer.open {
+    right: 0; /* Slides in */
+}
+
+.basketTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.basketList {
+    list-style-type: none;
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.basketItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.basketFooter {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-top: 1rem solid #e0e0e0;
+}
